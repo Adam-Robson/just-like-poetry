@@ -1,21 +1,20 @@
 /* DOM */
-const instruction = document.getElementById('instruction');
-
+const button = document.getElementById('button-element');
 /* State */
-const linesOneAndThree = [];
-const lineTwo = [];
-const buttonState = true;
 
-/* Listeners */
-
-
-
+const linesOneAndThree = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'];
+const lineTwo = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];
 
 /* Display */
 
-const displayHaiku = () => {
+function displayHaiku() {
+  // hide instruction
+  const instruction = document.getElementById('instruction');
+  instruction.classList.add('hidden');
+
   const haikuEl = document.getElementById('haiku-section');
 
+  // create haiku section
   const wrapper = document.createElement('div');
   const firstPhrase = document.createElement('p');
   const secondPhrase = document.createElement('p');
@@ -25,36 +24,25 @@ const displayHaiku = () => {
   secondPhrase.classList.add('phrase');
   thirdPhrase.classList.add('phrase');
 
+  // set haiku text
   firstPhrase.textContent = generateIndexValue(linesOneAndThree);
   secondPhrase.textContent = generateIndexValue(lineTwo);
   thirdPhrase.textContent = generateIndexValue(linesOneAndThree);
 
+  // append nodes
   wrapper.append(firstPhrase, secondPhrase, thirdPhrase);
   haikuEl.append(wrapper);
 
   return haikuEl;
 }
 
-
-function displayButton() {
-  const buttonArticle = document.getElementById('button-article');
-  const button = document.createElement('button');
-
-  button.classList.add('button-element');
-
-  if (buttonState) {
-    button.textContent = 'create';
-  } else {
+function tgl() {
+  if (button.textContent === 'create') {
     button.textContent = 'reset';
+  } else if  (button.textContent === 'reset') {
+    button.textContent = 'create';
   }
-
-  buttonArticle.append(button);
-  return buttonArticle;
-
 }
-displayButton();
-
-
 
 /* Utilities */
 
@@ -65,8 +53,9 @@ function generateIndexValue(array) {
   return string;
 }
 
-/* function to hide instruction when haiku displays */
-function hideInstruction() {
-  return instruction.classList.add('hidden');
-}
+button.addEventListener('click', () => {
+  displayHaiku();
+  tgl();
+})
+
 
