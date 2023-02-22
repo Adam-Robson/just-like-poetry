@@ -6,6 +6,8 @@
   --copper: hsla(32, 46%, 45%, 1);
   
   font-family: 'Assistant', Verdana, Geneva, Tahoma, sans-serif;
+  overflow: hidden;
+
 }
 
 * {
@@ -17,5 +19,62 @@ body {
   width: 100vw;
   margin: auto;
   padding: 0;
+  background-color: var(--nyanza);
+  color: var(--crayola);
 }
 
+header {
+  top: 0;
+  padding: 3em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  text-align: center
+}
+
+#main-container {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+}
+
+#control-section {
+  font-size: 1em;
+  grid-column: 2 / 11;
+  grid-row: 6 / 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-element {
+  margin: 1em;
+  color: var(--crayola);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+#favicon {
+  height: 5em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  border: .5px var(--crayola) solid;
+
+}
+
+
+.hidden {
+  display: none;
+}
+
+/* button-element, phrase, main-container, haiku-section, control-section, instruction, button-article */
