@@ -10,18 +10,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap" rel="stylesheet">
   <!-- icon -->
-  <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
-  <!-- css -->
+  <link rel="icon" href="/assets/favicon.ico" />
+  <!-- css -->  
   <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/global.css" />
   <!-- js -->
   <script type="module" src="index.js"></script>
   <!-- title -->
-  <title>Supabase Web App</title>
+  <title>a haiku for you</title>
 </head>
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+  <header>
+    <h1>a haiku for you</h1>
+  </header>
+  <main id="main-container">
+    <section id="haiku-section"></section>
+    <section id="control-section">
+      <article id="instruction">
+        clicking the button below will generate a haiku written just for you.
+      </article>
+    </section>
+  </main>
+  <footer>
+    <img src="./assets/favicon.ico" alt="adaam favicon" />
+  </footer>
 </body>
 </html>
