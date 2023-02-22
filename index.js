@@ -1,25 +1,33 @@
+import { linesOneAndThree, lineTwo } from './data.js';
+
 /* DOM */
 const button = document.getElementById('button-element');
-/* State */
 
-const linesOneAndThree = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'];
-const lineTwo = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];
+/* Listener */
+button.addEventListener('click', (e) => {
+  if (e.target.textContent === 'create') {
+    displayHaiku();
+  } else {
+    resetButton();
+  }
+});
 
-/* Display */
+/* Display Functions*/
 
 function displayHaiku() {
+
+  // change button text
+  tgl();
+
   // hide instruction
   const instruction = document.getElementById('instruction');
   instruction.classList.add('hidden');
-
-  const haikuEl = document.getElementById('haiku-section');
+  const wrapper = document.getElementById('wrapper');
 
   // create haiku section
-  const wrapper = document.createElement('div');
   const firstPhrase = document.createElement('p');
   const secondPhrase = document.createElement('p');
   const thirdPhrase = document.createElement('p');
-
   firstPhrase.classList.add('phrase');
   secondPhrase.classList.add('phrase');
   thirdPhrase.classList.add('phrase');
@@ -29,33 +37,40 @@ function displayHaiku() {
   secondPhrase.textContent = generateIndexValue(lineTwo);
   thirdPhrase.textContent = generateIndexValue(linesOneAndThree);
 
-  // append nodes
+  // append
   wrapper.append(firstPhrase, secondPhrase, thirdPhrase);
   haikuEl.append(wrapper);
-
   return haikuEl;
 }
 
-function tgl() {
-  if (button.textContent === 'create') {
-    button.textContent = 'reset';
-  } else if  (button.textContent === 'reset') {
-    button.textContent = 'create';
-  }
+function resetButton() {
+  // change button text
+  tgl();
+  const haikuEl = document.getElementById('haiku-section');
+
+  // remove hidden class from instruction
+  const instruction = document.getElementById('instruction');
+  instruction.classList.remove('hidden');
+  phrases = document.getElementsByClassName('phrase');
+  phrases.textContent = '';
+  // remove children from haiku element
+  const wrap = document.getElementById('wrapper');
+  wrap.childNodes.remove();
+
+  return wrap;
 }
 
-/* Utilities */
-
-/* function to generate a string from array in State above. */
 function generateIndexValue(array) {
   const integer = Math.floor(Math.random() * array.length);
   const string = array[integer];
   return string;
 }
 
-button.addEventListener('click', () => {
-  displayHaiku();
-  tgl();
-})
-
-
+function tgl() {
+ 
+  if (button.textContent === 'create') {
+    button.textContent = 'reset';
+  } else if (button.textContent === 'reset') {
+    button.textContent = 'create';
+  }
+}

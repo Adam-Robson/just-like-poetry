@@ -6,8 +6,6 @@
   --copper: hsla(32, 46%, 45%, 1);
   
   font-family: 'Assistant', Verdana, Geneva, Tahoma, sans-serif;
-  overflow: hidden;
-
 }
 
 * {
@@ -15,8 +13,6 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
   margin: auto;
   padding: 0;
   background-color: var(--nyanza);
@@ -42,6 +38,14 @@ header {
   display: grid;
   grid-template-columns: repeat(11, 1fr);
   grid-template-rows: repeat(9, 1fr);
+}
+
+#wrapper {
+  grid-column: 2 / 9;
+}
+
+.phrases {
+  grid-column: 2 / 9;
 }
 
 #control-section {

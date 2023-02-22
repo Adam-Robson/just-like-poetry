@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/styles/reset.css" />
   <link rel="stylesheet" href="/styles/global.css" />
   <!-- js -->
-  <script type="module" src="index.js"></script>
+  <script type="module" src="/index.js" async></script>
   <!-- title -->
   <title>a haiku for you</title>
 </head>
@@ -24,7 +24,9 @@
     <h1 class="h1">a haiku for you</h1>
   </header>
   <main id="main-container">
-    <section id="haiku-section"></section>
+    <section id="haiku-section">
+      <div id="wrapper"></div>
+    </section>
     <section id="control-section">
       <article id="instruction">
         click the button below & generate a haiku!
