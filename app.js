@@ -1,4 +1,4 @@
-import { fiveSyllables, sevenSyllables } from './data.js';
+import { fiveSyllables, sevenSyllables, description } from './data.js';
 
 function renderHaiku() {
   const parElOne = document.createElement('p');

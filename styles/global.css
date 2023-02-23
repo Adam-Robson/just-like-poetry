@@ -5,7 +5,8 @@
   --space: hsla(207, 12%, 34%, 1);
   --jet: hsla(270, 6%, 21%, 1);
 
-  
+  background-color: var(--dogwood);
+  color: var(--space);
   font-family: 'Assistant', Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 400;
 }
@@ -17,8 +18,7 @@
 body {
   margin: auto;
   padding: 0;
-  background-color: var(--dogwood);
-  color: var(--space);
+  
 }
 
 header {
