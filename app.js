@@ -1,60 +1,55 @@
-import { fiveSyllables, sevenSyllables, description } from './data';
+import { fiveSyllables, sevenSyllables } from './data.js';
+
+function renderHaiku() {
+  const parElOne = document.createElement('p');
+  const parElTwo = document.createElement('p');
+  const parElThree = document.createElement('p');
+  parElOne.id = 'phraseOne';
+  parElTwo.id = 'phraseTwo';
+  parElThree.id = 'phraseThree';
+  const randomNumberOne = Math.floor(Math.random() * fiveSyllables.length);
+  const randomNumberTwo = Math.floor(Math.random() * sevenSyllables.length);
+  const randomNumberThree = Math.floor(Math.random() * fiveSyllables.length);
+  let arrayItemOne = fiveSyllables[randomNumberOne];
+  let arrayItemTwo = sevenSyllables[randomNumberTwo];
+  let arrayItemThree =  fiveSyllables[randomNumberThree];
+  parElOne.textContent = arrayItemOne;
+  parElTwo.textContent = arrayItemTwo;
+  parElThree.textContent = arrayItemThree;
+  const instruction = document.getElementById('instruction');
+  instruction.classList.add('hidden');
+
+  const wrapper = document.getElementById('wrapper');
+  wrapper.append(parElOne, parElTwo, parElThree);
+  return wrapper;
+}
+
+let pageState = true;
 
 const buttonEl = document.getElementById('button-element');
-const instructionEl = document.getElementById('instruction');
-const wrapperEl = document.getElementById('wrapper');
-const history = document.getElementBById('history');
-
-buttonEl.addEventListener('click', buttonClick());
-
-const buttonClick = function() {
-  wrapperEl.children ? displayHaiku() : resetButton();
-}
-
-const toggleButtonText = function() {
-  if (buttonEl.textContent === 'create') {
+buttonEl.addEventListener('click', () => {
+  pageState = !pageState;
+  if (pageState === false) {
+    renderHaiku();
     buttonEl.textContent = 'reset';
-  } else if (buttonEl.textContent === 'reset') {
+  } else if (pageState === true) {
+    toggleButton();
+    resetPage();
     buttonEl.textContent = 'create';
   }
-};
+});
 
-const displayHaiku = function() {
-  toggleButtonText();
-  instructionEl.classList.add('hidden');
-
-  const pElOne = document.createElement('p');
-  const pElTwo = document.createElement('p');
-  const pElThree = document.createElement('p');
-
-  pElOne.textContent = randomPhrase(fiveSyllables);
-  pElTwo.textContent = randomPhrase(sevenSyllables);
-  pElThree.textContent = randomPhrase(fiveSyllables);
-
-  wrapperEl.append(pElOne, pElTwo, pElThree);
-
-  return wrapperEl;
-};
-
-const randomPhrase = (arr) => {
-  const randomIndex = Math.floor(Math.random() * arr.length);
-  const item = arr[randomIndex];
-  return item;
-};
-
-const resetButton = function() {
-  toggleButtonText();
-  instructionEl.classList.remove('hidden');
-  pElOne.remove;
-  pElTwo.remove;
-  pElThree.remove;
+function toggleButton() {
+  if (buttonEl.textContent === 'create') {
+    return buttonEl.textContent = 'reset';
+  } else if (buttonEl.textContent === 'reset') {
+    return buttonEl.textContent = 'create';
+  }
 }
 
-const renderHistory = function() {
-  const divEl = document.createElement('div');
-  divEl.textContent = description;
-  history.append(divEl);
-  return history;
+function resetPage() {
+  toggleButton();
+  instruction.classList.remove('hidden');
+  const wrapper = document.getElementById('wrapper');
+  wrapper.innerHTML = '';
 }
-
-renderHistory();

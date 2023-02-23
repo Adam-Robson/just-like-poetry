@@ -1,11 +1,13 @@
 :root {
-  --crayola: hsla(196, 10%, 21%, 1);
-  --pewter: hsla(197, 32%, 58%, 1);
-  --nyanza: hsla(78, 100%, 90%, 1);
-  --brick: hsla(10, 59%, 41%, 1);
-  --copper: hsla(32, 46%, 45%, 1);
+  --dogwood: hsla(17, 64%, 88%, 1);
+  --celeste: hsla(182, 91%, 82%, 1);
+  --vermilion: hsla(2, 84%, 63%, 1);
+  --space: hsla(207, 12%, 34%, 1);
+  --jet: hsla(270, 6%, 21%, 1);
+
   
   font-family: 'Assistant', Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
 }
 
 * {
@@ -15,8 +17,8 @@
 body {
   margin: auto;
   padding: 0;
-  background-color: var(--nyanza);
-  color: var(--crayola);
+  background-color: var(--dogwood);
+  color: var(--space);
 }
 
 header {
@@ -24,43 +26,62 @@ header {
   padding: 3em;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .h1 {
-  text-align: center
+  text-align: center;
+  font-size: 2.5em;
 }
 
 #main-container {
   width: 50%;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: repeat(9, 1fr);
 }
 
 #wrapper {
-  grid-column: 2 / 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  height: 60vh;
 }
 
-.phrase {
-  grid-column: 2 / 9;
+#phraseOne {
+  line-height: 2;
+  font-size: 1.5em;
+
+}
+
+#phraseTwo {
+  line-height: 2;
+  font-size: 1.5em;
+
+}
+
+#phraseThree {
+  line-height: 2;
+  font-size: 1.5em;
+
 }
 
 #control-section {
   font-size: 1em;
-  grid-column: 2 / 11;
-  grid-row: 6 / 7;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+#instruction {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
 .button-element {
-  margin: 1em;
-  color: var(--crayola);
+  color: var(--space);
 }
 
 footer {
@@ -76,9 +97,6 @@ footer {
 
 }
 
-
 .hidden {
   display: none;
 }
-
-/* button-element, phrase, main-container, haiku-section, control-section, instruction, button-article */
