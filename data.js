@@ -1,26 +1,18 @@
 export const description = 'Haiku is a traditional style of poetry born in Japan.  The philosophy of the haiku includes the characteristics of simplicity and tension.  There are only ever three lines in a haiku.  The first and third lines are composed of five syllables (though there is room for deviating regarding this rule), and the second line is composed of seven syllables.  Though not necessarily so, the poems are often focused on an aspect of the authors environment.  Often visceral and evocative, this style of poetry is beloved by poets around the world.  Haikus often will pivot around a single instant.  A well - written haiku will weave generally dissimilar themes together, or stage a scene with ambiguity, before revealing the connections and cathartic release';
 
-export const linesOneAndThree = [
-  'desert like sea floor',
+export const fiveSyllables = [
+  'desert or sea floor',
   'almost all water',
-  'sloth devouring',
-  'grass conceals a',
-  'death of grasses',
+  'grass conceals the past',
   'an old silent pond',
-  'jaws sideways, for a feast',
   'passenger pigeon',
-  'is it twilight yet dear',
-  'even your bones still ache',
+  'is it twilight yet',
+  'even your bones ache',
   'a world of dew',
-  'a world of struggle',
-  'i write, erase, rewrite',
+  'world of struggle',
   'then a poppy blooms',
-  'over the winter',
-  'with no leaves to blow',
-  'the apparition of',
-  'these faces in the crowd',
+  'an apparition',
   'life is little and',
-  'yet we say we are so big',
   'birds punctuate days',
   'that is why i left',
   'please dont leave again',
@@ -35,11 +27,13 @@ export const linesOneAndThree = [
   'and feed you dinner'
 ];
 
-export const lineTwo = [
+export const sevenSyllables = [
   'and mountain like earthen wake',
   'bark and a tiger buried',
+  'all the faces in the crowd',
+  'yet we say we are so big',
   'litany of sins to save',
-  'a frog jumps into the pnd',
+  'a frog jumps into the pond',
   'and within every dew drop',
   'transferred to another wick',
   'the still apparition of',
@@ -51,5 +45,7 @@ export const lineTwo = [
   'or do not believe i do',
   'i would put it on some rice',
   'these walls can trick my mind',
-  'to dull the pain inside you'
+  'my jaws sideways, for a feast',
+  'to dull the pain inside you',
+  'i write, erase and rewrite'
 ];
