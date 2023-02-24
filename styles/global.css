@@ -1,0 +1,102 @@
+:root {
+  --dogwood: hsla(17, 64%, 88%, 1);
+  --celeste: hsla(182, 91%, 82%, 1);
+  --vermilion: hsla(2, 84%, 63%, 1);
+  --space: hsla(207, 12%, 34%, 1);
+  --jet: hsla(270, 6%, 21%, 1);
+
+  background-color: var(--dogwood);
+  color: var(--space);
+  font-family: 'Assistant', Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  padding: 0;
+  
+}
+
+header {
+  top: 0;
+  padding: 3em;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+#main-container {
+  width: 50%;
+  margin: auto;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  height: 60vh;
+}
+
+#phraseOne {
+  line-height: 2;
+  font-size: 1.5em;
+
+}
+
+#phraseTwo {
+  line-height: 2;
+  font-size: 1.5em;
+
+}
+
+#phraseThree {
+  line-height: 2;
+  font-size: 1.5em;
+
+}
+
+#control-section {
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#instruction {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+.button-element {
+  color: var(--space);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+#favicon {
+  height: 5em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  border: .5px var(--crayola) solid;
+
+}
+
+.hidden {
+  display: none;
+}

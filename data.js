@@ -1,0 +1,51 @@
+export const description = '*Haiku is a traditional style of poetry that was born in Japan.  Visceral and evocative, this style of poetry irequires a three line structure with the first and third phrases being constructed of five syllables, and the middle line of seven.  The topic of Haikus often center around a single instant.  A well - written haiku will generally juxtapose themes, or stage a scene with ambiguity, before revealing the connections and cathartic release.';
+
+export const fiveSyllables = [
+  'desert or sea floor',
+  'almost all water',
+  'grass conceals the past',
+  'an old silent pond',
+  'passenger pigeon',
+  'is it twilight yet',
+  'even your bones ache',
+  'a world of dew',
+  'world of struggle',
+  'then a poppy blooms',
+  'an apparition',
+  'life is little and',
+  'birds punctuate days',
+  'that is why i left',
+  'please dont leave again',
+  'i need you for now.',
+  'what is troubling me?',
+  'whered they hide the time?!',
+  'it was only words.',
+  'i can not stand you',
+  'believe i love you.',
+  'its not up to you.',
+  'if i had some fish',
+  'and feed you dinner'
+];
+
+export const sevenSyllables = [
+  'and mountain like earthen wake',
+  'bark and a tiger buried',
+  'all the faces in the crowd',
+  'yet we say we are so big',
+  'litany of sins to save',
+  'a frog jumps into the pond',
+  'and within every dew drop',
+  'transferred to another wick',
+  'the still apparition of',
+  'forest winds will howl in rage',
+  'erase again, and rewrite',
+  'is transferred to another',
+  'and within every dew drop',
+  'like none before they crushed me',
+  'or do not believe i do',
+  'i would put it on some rice',
+  'these walls can trick my mind',
+  'my jaws sideways, for a feast',
+  'to dull the pain inside you',
+  'i write, erase and rewrite'
+];
