@@ -1,6 +1,9 @@
 export const description = '*Haiku is a traditional style of poetry that was born in Japan.  Visceral and evocative, this style of poetry irequires a three line structure with the first and third phrases being constructed of five syllables, and the middle line of seven.  The topic of Haikus often center around a single instant.  A well - written haiku will generally juxtapose themes, or stage a scene with ambiguity, before revealing the connections and cathartic release.';
 
 export const fiveSyllables = [
+  'the horizon grows',
+  'look out the window',
+  'the world wakes up',
   'desert or sea floor',
   'almost all water',
   'grass conceals the past',
@@ -24,10 +27,26 @@ export const fiveSyllables = [
   'believe i love you.',
   'its not up to you.',
   'if i had some fish',
-  'and feed you dinner'
+  'and feed you dinner',
+  'a smile is a friend',
+  'the northwest winter',
+  'turns the earth to green',
+  'let silence soothe me',
+  'instants turned to dreams',
+  'the path to heaven',
+  'so i close my eyes',
+  'when a light is on',
+  'it\'s already there'
+
 ];
 
 export const sevenSyllables = [
+  'resting gently over hear',
+  'see vibration all around',
+  'i take a splendid long sip',
+  'if it comes from you or them',
+  'i curl up next to my dog',
+  'i do it all of the time',
   'and mountain like earthen wake',
   'bark and a tiger buried',
   'all the faces in the crowd',
